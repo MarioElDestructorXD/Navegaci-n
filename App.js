@@ -8,6 +8,7 @@ import Profile from './src/screens/Profile';
 
 
 export default function App() {
+  console.disableYellowBox = true;
   return (
     <Navigation/>
   );
