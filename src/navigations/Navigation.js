@@ -1,10 +1,11 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Index from "../screens/Index";
-import Profile from "../screens/Profile";
-import Smart from "../screens/Smart";
-import SmartGo from "../screens/SmartGo";
+import { Icon } from "react-native-elements";
+import IndexStack from "./IndexStack";
+import ProfileStack from "./ProfileStack";
+import SmartStack from "./SmartStack";
+import SmartGoStack from "./SmartGoStack"
 
 const Tab = createBottomTabNavigator();
 
@@ -18,36 +19,60 @@ export default function Navigation() {
           activeTintColor: "red",
         }}
         screenOptions={({ route }) => ({
-          tabBarIcon: ({ color }) => screenOption(route, color),
+          tabBarIcon: ({ color }) => screenOption(route, color)
         })}
       >
         <Tab.Screen
           name="index"
-          component={Index}
+          component={IndexStack}
           options={{ title: "Inicio" }}
         />
         <Tab.Screen
           name="profile"
-          component={Profile}
+          component={ProfileStack}
           options={{ title: "Perfil" }}
         />
         <Tab.Screen
           name="smart"
-          component={Smart}
+          component={SmartStack}
           options={{ title: "Smart" }}
         />
         <Tab.Screen
           name="smart-go"
-          component={SmartGo}
+          component={SmartGoStack}
           options={{ title: "SmartGo" }}
         />
       </Tab.Navigator>
     </NavigationContainer>
   );
 
-  function name(route, color) {
-      return(
-          
-      )
+  function screenOption(route, color) {
+    let icono;
+
+    switch (route.name) {
+      case "index":
+        icono = "view-grid-outline"
+        break;
+      case "smart":
+        icono = "weight-lifter"
+        break;
+      case "smart-go":
+        icono = "google"
+        break;
+      case "profile":
+          icono = "account-outline"
+        break;
+      default:
+        break;
+    }
+
+    return(
+      <Icon 
+      type="material-community" 
+      name={icono} 
+      size={22}
+      color="color"
+      />
+    )
   }
 }
