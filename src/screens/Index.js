@@ -12,7 +12,7 @@ export default function Index(props){
                 ()=>props.navigation.navigate("profile")
             }/>
             <Button title="Ir a Training" onPress={
-                ()=>props.navigation.navigate("smart","training")
+                ()=>props.navigation.navigate("smart", { screen:'training'})
             }/>
         </View>
     )
