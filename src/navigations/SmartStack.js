@@ -12,6 +12,11 @@ export default function indexStack() {
         component={ Smart }
         options={{ title: "Smart" }}
         />
+        <Stack.Screen
+        name='training'
+        component={ Training }
+        options={{ title: "EntrenamientoX" }}
+        />
     </Stack.Navigator>
   )
 }
