@@ -1,16 +1,17 @@
-import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import 'react-native-gesture-handler';
-import Navigation from './src/navigations/Navigation';
-import Index from './src/screens/Index';
-import Profile from './src/screens/Profile';
-
+import React, { useEffect } from 'react'
+import 'react-native-gesture-handler'
+import Navigation from './src/navigations/navigation'
+// import { firebaseApp } from './src/utils/firebase'
+// import * as firebase from 'firebase'
 
 export default function App() {
-  console.disableYellowBox = true;
-  return (
-    <Navigation/>
-  );
-}
+  console.disableYellowBox = true
 
+  // useEffect(() => {
+  //   firebase.outh().onAuthStateChanged((user) => {
+  //     console.log(user)
+  //   })
+  // }, [])
+
+  return <Navigation />
+}
