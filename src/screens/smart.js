@@ -1,15 +1,14 @@
-import { Text, View, Button } from 'react-native'
-import React from 'react'
+import React from "react"
+import {Text, View, Button} from "react-native"
 
-export default function smart(props) {
-  const {navigation}=props;
-  return (
-    <View>
-      <Text>Mi Smart🐱‍👤</Text>
-      <Button title='Ir a Training'
-      onPress={()=>navigation.navigate("Training")}
-      />
-    </View>
-  )
+export default function Smart(props){
+    const {navigation} = props;
+    return(
+        <View>
+            <Text>Mi smart</Text>
+            <Button title="Ir a Training" onPress={()=>{
+                navigation.navigate("training")
+            }}></Button>
+        </View>
+    )
 }
-

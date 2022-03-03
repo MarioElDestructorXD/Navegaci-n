@@ -1,15 +1,14 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
-import Smart from '../screens/smart'
-import Training from '../screens/training'
-
+import Smart from '../screens/Smart';
+import Training from '../screens/Training';
 const Stack = createStackNavigator();
 
-export default function smartStack() {
+export default function IndexStack() {
   return (
-      <Stack.Navigator>
-          <Stack.Screen name='Smart' component={Smart} options={{title: "Smart"}}/>
-          <Stack.Screen name='Training' component={Training} options={{title: "Training"}}/>
-      </Stack.Navigator>
+    <Stack.Navigator>
+        <Stack.Screen name='smart' options={{ title: 'Smart' }} component={Smart}/>
+        <Stack.Screen name='training' options={{ title: 'Training' }} component={Training}/>
+    </Stack.Navigator>
   )
 }

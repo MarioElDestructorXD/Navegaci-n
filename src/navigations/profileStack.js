@@ -1,14 +1,12 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
-import Profile from '../screens/profile'
-import Smart from '../screens/smart'
-
+import Profile from '../screens/Profile';
 const Stack = createStackNavigator();
 
-export default function profileStack() {
+export default function IndexStack() {
   return (
-      <Stack.Navigator>
-          <Stack.Screen name='Profile' component={Profile} options={{title: "Perfil"}}/>
-      </Stack.Navigator>
+    <Stack.Navigator>
+        <Stack.Screen name='profile' options={{ title: 'Profile' }} component={Profile}/>
+    </Stack.Navigator>
   )
 }

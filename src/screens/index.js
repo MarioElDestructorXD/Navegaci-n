@@ -1,45 +1,52 @@
-import { Text, View, Button } from 'react-native'
-import React from 'react'
-import { useEffect, useState } from 'react'
-import { firebaseApp } from '../utils/firebase'
-import * as firebase from 'firebase'
-import Login from './login'
-import Loading from '../components/loading'
+import React, { useEffect, useState } from "react";
+import { Text, View, Button } from "react-native";
+import { firebaseApp } from "../utils/firebase";
+import firebase from "@firebase/app";
+require("firebase/auth");
+import Login from "./Login";
+import Loading from "../components/Loading";
 
-export default function index(props) {
-  const {navigation}=props;
-  const [login, setLogin] = useState(null);//guardar estado de la sesion
+export default function Index(props) {
+  const [login, setLogin] = useState(null);
 
-  useEffect(() => {//consultar estado del usuario
+  useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
-      !user ? setLogin(false) : setLogin(true)
+      !user ? setLogin(false) : setLogin(true);
     });
   }, []);
 
-  if(login === null)return<Loading isVisible={true} text={"Cargando"}/>;
-
-
-  if(login){
+  if (login === null) return <Loading isVisible={true} text={"Cargando..."}/>;
+  if (login) {
     return (
       <View>
-        <Text>Mi Index🐱‍🐉</Text>
-        <Button title='Ir a Smart'
-        onPress={()=>navigation.navigate("Smart")}
-        />
-        <Button title='Ir al Perfil'
-        onPress={()=>navigation.navigate("Profile")}
-        />
-        <Button title='Ir a Training'
-        onPress={()=>navigation.navigate("Smart", {screen :"Training"})}
-        />
+        <Text>Mi index</Text>
+        <Button
+          title="Ir a Smart"
+          onPress={() => {
+            props.navigation.navigate("smart");
+          }}
+        ></Button>
+        <Button
+          title="Ir a Profile"
+          onPress={() => {
+            props.navigation.navigate("profile");
+          }}
+        ></Button>
+        <Button
+          title="Ir a SmartGo"
+          onPress={() => {
+            props.navigation.navigate("smart-go");
+          }}
+        ></Button>
+        <Button
+          title="Ir a Training"
+          onPress={() => {
+            props.navigation.navigate("smart", { screen: "training" });
+          }}
+        ></Button>
       </View>
-    )
-  }else{
-    return(
-      <Login></Login>
-    )
-    
+    );
+  } else {
+      return(<Login/>);
   }
-  
 }
-
