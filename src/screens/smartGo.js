@@ -1,10 +1,11 @@
-import React from "react"
-import {Text, View} from "react-native"
+import { Text, View } from 'react-native'
+import React from 'react'
 
-export default function SmartGo(){
-    return(
-        <View>
-            <Text>Mi smartgo</Text>
-        </View>
-    )
+export default function smartGo() {
+  return (
+    <View>
+      <Text>Mi Smart Go🤯</Text>
+    </View>
+  )
 }
+

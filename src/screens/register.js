@@ -1,36 +1,33 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
-import React from 'react'
-import RegisterForm from '../components/acount/FormRegister'
-import {Icon, Input,Button} from 'react-native-elements'
-import { ScrollView } from 'react-native-web'
-import FormRegister from '../components/acount/FormRegister'
+import { StyleSheet, Text, View, ScrollView, Image } from 'react-native'
+import React, {useRef} from 'react'
+import {Icon, Input, Button} from 'react-native-elements'
+import FormRegister from '../components/account/formRegister'
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view'
+import Toast from 'react-native-easy-toast'
 
-export default function Register() {
+export default function register() {
+  const toastRef = useRef();
+  console.log(toastRef)
   return (
-    <ScrollView>
-      <Image
-        style={styles.logo}
-        resizeMode="contain"
-        source={{
-          uri: "https://upload.wikimedia.org/wikipedia/commons/5/54/Logo-utez.png",
-        }}
-      />
-
-      <View style={styles.viewForm}>
-        <FormRegister></FormRegister>
+    <KeyboardAwareScrollView>
+      <Image style={styles.logo} resizeMode="contain" 
+        source={{uri:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQALSZ-Xq8fj-8UjVqqMUkJQyLE8_Hen6nQMA&usqp=CAU'}}
+        />
+      <View style={styles.formView}>
+        <FormRegister toastRef={toastRef}/>
       </View>
-
-    </ScrollView>
+      <Toast ref={toastRef} position="center" opacity={0.9} />
+    </KeyboardAwareScrollView>
   )
 }
 
 const styles = StyleSheet.create({
-  logo: {
-    height: 200,
-    width: 400,
-    alignSelf: "center",
+  formView:{
+    marginHorizontal: 40
   },
-  viewForm:{
-    marginHorizontal:40
+  logo:{
+    height:100,
+    width:200,
+    alignSelf:"center"
   }
 })

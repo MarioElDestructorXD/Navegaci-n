@@ -1,10 +1,11 @@
-import React from "react"
-import {Text, View} from "react-native"
+import { Text, View } from 'react-native'
+import React from 'react'
 
-export default function Training(){
-    return(
-        <View>
-            <Text>Mi training</Text>
-        </View>
-    )
+export default function index() {
+  return (
+    <View>
+      <Text>Mi Training</Text>
+    </View>
+  )
 }
+

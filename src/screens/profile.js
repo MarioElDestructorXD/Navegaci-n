@@ -1,20 +1,21 @@
-import React from "react"
-import {Text, View, Button} from "react-native"
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { Button } from "react-native-elements";
 
-export default function Profile(props){
-    return(
-        <View>
-            <Text>Mi profile</Text>
-            <Button title="Ir a Smart" onPress={()=>{
-                props.navigation.navigate("smart")
-            }}></Button>
-            <Button title="Ir a Inicio" onPress={()=>{
-                props.navigation.navigate("index")
-            }}></Button>
-            <Button title="Ir a SmartGo" onPress={()=>{
-                props.navigation.navigate("smart-go")
-            }}></Button>
-        </View>
-        
-    )
-}
+const profile = () => {
+  return (
+    <View style={styles.userInfo}>
+      <Text>Información de Usuario</Text>
+      <Text>Opciones de Cuenta</Text>
+      <Button
+        title="Cerrar Sesion"
+        buttonStyle={styles.btnCloseSesion}
+        titleStyle={styles.btnTitle}
+      />
+    </View>
+  );
+};
+
+export default profile;
+
+const styles = StyleSheet.create({});
