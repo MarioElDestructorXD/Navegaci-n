@@ -3017,6 +3017,14 @@
   dependencies:
     "fontfaceobserver" "^2.1.0"
 
+"expo-image-picker@^8.4.0":
+  "integrity" "sha512-XvBNxC5ZXJN9Vsvr+QFk9PYJW1PP7YoPqprFfoBeg1/eBtCAEjgqdQ2o/Ak1RQoCqwg8SEKxxHtQpGogZZCx5g=="
+  "resolved" "https://registry.npmjs.org/expo-image-picker/-/expo-image-picker-8.4.0.tgz"
+  "version" "8.4.0"
+  dependencies:
+    "expo-permissions" "~9.1.0"
+    "uuid" "7.0.2"
+
 "expo-keep-awake@~10.0.2":
   "integrity" "sha512-Ro1lgyKldbFs4mxhWM+goX9sg0S2SRR8FiJJeOvaRzf8xNhrZfWA00Zpr+/3ocCoWQ3eEL+X9UF4PXXHf0KoOg=="
   "resolved" "https://registry.npmjs.org/expo-keep-awake/-/expo-keep-awake-10.0.2.tgz"
@@ -3040,6 +3048,16 @@
   dependencies:
     "compare-versions" "^3.4.0"
     "invariant" "^2.2.4"
+
+"expo-permissions@^8.2.0":
+  "integrity" "sha512-XH+7ybVnIkf6KQeVHM5Q+nyvWbdflKVXfLbU1lBBH25R1s0EBt7wvh9hK1OzCQ8AkvrbpRqsjenqYFD8lgP/sA=="
+  "resolved" "https://registry.npmjs.org/expo-permissions/-/expo-permissions-8.2.0.tgz"
+  "version" "8.2.0"
+
+"expo-permissions@~9.1.0":
+  "integrity" "sha512-nNF8voeRSzMCIJzt27dmpHHm70ZiZh528GJJzHd9qX9aIgrN2j0WsrFI31p7Q8uPUI8HDCBbF7JmvO91GmFrhQ=="
+  "resolved" "https://registry.npmjs.org/expo-permissions/-/expo-permissions-9.1.0.tgz"
+  "version" "9.1.0"
 
 "expo-status-bar@~1.2.0":
   "integrity" "sha512-pVZZ/kDCXFK79E4dCtRecs3XLC8aiwlciutSd/fFmUPJSQZ1Txia6hlKajPt0GAYft8/YnT0V3URXzWZOBniYQ=="
@@ -6096,6 +6114,11 @@
   "integrity" "sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg=="
   "resolved" "https://registry.npmjs.org/uuid/-/uuid-7.0.3.tgz"
   "version" "7.0.3"
+
+"uuid@7.0.2":
+  "integrity" "sha512-vy9V/+pKG+5ZTYKf+VcphF5Oc6EFiu3W8Nv3P3zIh0EqVI80ZxOzuPfe9EHjkFNvf8+xuTHVeei4Drydlx4zjw=="
+  "resolved" "https://registry.npmjs.org/uuid/-/uuid-7.0.2.tgz"
+  "version" "7.0.2"
 
 "vary@~1.1.2":
   "integrity" "sha1-IpnwLG3tMNSllhsLn3RSShj2NPw="
